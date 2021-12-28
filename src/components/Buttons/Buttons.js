@@ -1,21 +1,30 @@
 import Button from "./Button";
 
-const Buttons = () => {
+const Buttons = (props) => {
+  const startHandler = () => {
+    props.startClicked();
+  };
+
   return (
     <div>
       <div>
-        <Button num="1" />
-        <Button num="2" />
-        <Button num="3" />
-        <Button num="4" />
-        <Button num="5" />
+        <Button>1</Button>
+        <Button>2</Button>
+        <Button>3</Button>
+        <Button>4</Button>
+        <Button>5</Button>
+        <Button type="reset">C</Button>
       </div>
       <div>
-        <Button num="6" />
-        <Button num="7" />
-        <Button num="8" />
-        <Button num="9" />
-        <Button num="0" />
+        <Button>6</Button>
+        <Button>7</Button>
+        <Button>8</Button>
+        <Button>9</Button>
+        <Button>0</Button>
+        <Button type="submit">E</Button>
+      </div>
+      <div>
+        <Button onClick={startHandler}>Start</Button>
       </div>
     </div>
   );
