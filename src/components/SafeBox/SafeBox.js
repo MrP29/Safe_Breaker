@@ -4,7 +4,6 @@ import "./SafeBox.css";
 import Lights from "../Lights/Lights";
 import Display from "../Display/Display";
 import Buttons from "../Buttons/Buttons";
-import StartButton from "../Buttons/StartButton";
 
 const SafeBox = () => {
   const [randomNumber, setRandomNumber] = useState("");
@@ -18,8 +17,7 @@ const SafeBox = () => {
       <p>password : {randomNumber}</p>
       <Lights />
       <Display />
-      <Buttons />
-      <StartButton startClicked={generateRandomNumberHandler} />
+      <Buttons startClicked={generateRandomNumberHandler} />
     </div>
   );
 };
